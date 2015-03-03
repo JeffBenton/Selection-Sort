@@ -92,11 +92,14 @@ var swap = function(array, x, y){
 	array[y] = temp;
 	return array;
 }
-
+// 106 milliseconds for a 10000 item array.
 var test = [];
-for(i=0; i<100; i++)
+for(i=0; i<10000; i++)
 	test.push(Math.floor(Math.random()*10001));
+var b = new Date().getTime();
 test = selection_sort_double(test);
+var a = new Date().getTime();
 console.log(test);
+console.log(a-b);
 
 </script>
